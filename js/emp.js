@@ -61,7 +61,7 @@ function submit() {
             url: 'http://localhost:3000/data',
             type: 'POST',
             dataType: 'json',
-            data: person,
+            data: data,
             success: function (data, textStatus, xhr) {
                 console.log(data);
             },
@@ -75,7 +75,7 @@ function submit() {
             url: 'http://localhost:3000/data',
             type: 'PUT',
             dataType: 'json',
-            data: person,
+            data: data,
             success: function (data, textStatus, xhr) {
                 console.log(data);
             },
@@ -89,7 +89,7 @@ function submit() {
             url: 'http://localhost:3000/data',
             type: 'UPDATE',
             dataType: 'json',
-            data: person,
+            data: data,
             success: function (data, textStatus, xhr) {
                 console.log(data);
             },
@@ -103,7 +103,7 @@ function submit() {
             url: 'http://localhost:3000/data',
             type: 'DELETE',
             dataType: 'json',
-            data: person,
+            data: data,
             success: function (data, textStatus, xhr) {
                 console.log(data);
             },
