@@ -5,19 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="../js/emp.js"></script>
     <title>EMPLOYEE PAYROLL</title>
     <link rel="stylesheet" href="../css/emp.css">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-
-
+    
 </head>
 
 <body>
     <div class="div-container">
         <div class="parent-div">
             <div>
-                <img src="../assets/logo.png" class="logo">
+                <img src="../asset/profile-images/logo.png" class="logo">
             </div>
             <div class="text-parent">
                 <span class="emp">EMPLOYEE</span>
@@ -33,20 +32,20 @@
             <div class="align-form-content"> 
                 <div class="label-heading">Name</div>
                 <div>
-                    <input type="text" id="text" placeholder="Enter Name" value="text">
+                    <input type="text" id="text" placeholder="Enter Name" value="">
                 </div>
             </div>
             <div class="align-form-content">
                 <div class="label-heading">Profile Image</div>
                 <div class="profile-align">
                     <input type="radio" id="img-1" name="profile img" value="Img-1">
-                    <label for="img-1"><img class="radio-img" src="../assets/Ellipse -1.png"></label><br>
+                    <label for="img-1"><img class="radio-img" src="../asset/profile-images/Ellipse -1.png"></label><br>
                     <input type="radio" id="img-2" name="profile img" value="Img-2">
-                    <label for="img-2"><img class="radio-img" src="../assets/Ellipse -2.png"></label><br>
+                    <label for="img-2"><img class="radio-img" src="../asset/profile-images/Ellipse -2.png"></label><br>
                     <input type="radio" id="img-3" name="profile img" value="Img-3">
-                    <label for="img-3"><img class="radio-img" src="../assets/Ellipse -3.png"></label><br>
+                    <label for="img-3"><img class="radio-img" src="../asset/profile-images/Ellipse -3.png"></label><br>
                     <input type="radio" id="img-4" name="profile img" value="Img-4">
-                    <label for="img-4"><img class="radio-img" src="../assets/Ellipse -4.png"></label><br>
+                    <label for="img-4"><img class="radio-img" src="../asset/profile-images/Ellipse -4.png"></label><br>
                 </div>
             </div>
             <div class="align-form-content">
@@ -159,6 +158,15 @@
                             <option value="2011">2011</option>
                             <option value="2012">2012</option>
                             <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
                         </select>
                     </div>
                 </div>
@@ -175,7 +183,7 @@
             <div>
                 <button>Cancle</button>
                 <div>
-                    <button onclick="submit()">Submit</button>
+                    <button onclick="submit()" id="Save">Submit</button>
                     <button>Reset</button>
                 </div>
             </div>

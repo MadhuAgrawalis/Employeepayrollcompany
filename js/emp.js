@@ -38,28 +38,72 @@ function submit() {
     notes = document.getElementById('note').value;
 
     salary = document.querySelector('#salary').value;
-
-
-
-    dataDisplay = {
-        "name" : namee,
-        "profileImg" : profileImage,
-        "gender" : gender,
-        "department" : department,
-        "day" : day,
-        "month" : month,
-        "year" : year,
-        "notes" : notes,
-        "salary" : salary
-    }
+};
+    $(document).ready(function () {
+    $("#Save").click(function () {
     
 
-    $("#Save").click(function () {
+    var data = new Object();
+        data.name = name;
+        data.profileImg = profileImage;
+        data.gender = gender;
+        data.department = department;
+        data.day = day;
+        data.month = month;
+        data.year = year;
+        data.notes = notes;
+        data.salary = salary;
+    
+    
+
+    
         $.ajax({
-            url: 'http://localhost:8080/data',
+            url: 'http://localhost:3000/data',
             type: 'POST',
             dataType: 'json',
-            data: dataDisplay,
+            data: person,
+            success: function (data, textStatus, xhr) {
+                console.log(data);
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                console.log('Error in Operation');
+            }
+        });
+
+
+        $.ajax({
+            url: 'http://localhost:3000/data',
+            type: 'PUT',
+            dataType: 'json',
+            data: person,
+            success: function (data, textStatus, xhr) {
+                console.log(data);
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                console.log('Error in Operation');
+            }
+        });
+
+
+        $.ajax({
+            url: 'http://localhost:3000/data',
+            type: 'UPDATE',
+            dataType: 'json',
+            data: person,
+            success: function (data, textStatus, xhr) {
+                console.log(data);
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                console.log('Error in Operation');
+            }
+        });
+
+
+        $.ajax({
+            url: 'http://localhost:3000/data',
+            type: 'DELETE',
+            dataType: 'json',
+            data: person,
             success: function (data, textStatus, xhr) {
                 console.log(data);
             },
@@ -69,5 +113,4 @@ function submit() {
         });
     });
     
-   
-}
+});
