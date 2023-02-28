@@ -2,7 +2,7 @@ var namee,profileImage,gender,department,day,month,year,notes,salary;
 var dataDisplay;
 
 function submit() {
-    namee = document.getElementById("text").value;
+    name = document.getElementById("text").value;
 
     var ele = document.getElementsByName('profile img');
           
@@ -71,46 +71,46 @@ function submit() {
         });
 
 
-        $.ajax({
-            url: 'http://localhost:3000/data',
-            type: 'PUT',
-            dataType: 'json',
-            data: data,
-            success: function (data, textStatus, xhr) {
-                console.log(data);
-            },
-            error: function (xhr, textStatus, errorThrown) {
-                console.log('Error in Operation');
-            }
-        });
+        // $.ajax({
+        //     url: 'http://localhost:3000/data',
+        //     type: 'PUT',
+        //     dataType: 'json',
+        //     data: data,
+        //     success: function (data, textStatus, xhr) {
+        //         console.log(data);
+        //     },
+        //     error: function (xhr, textStatus, errorThrown) {
+        //         console.log('Error in Operation');
+        //     }
+        // });
 
 
-        $.ajax({
-            url: 'http://localhost:3000/data',
-            type: 'UPDATE',
-            dataType: 'json',
-            data: data,
-            success: function (data, textStatus, xhr) {
-                console.log(data);
-            },
-            error: function (xhr, textStatus, errorThrown) {
-                console.log('Error in Operation');
-            }
-        });
+        // $.ajax({
+        //     url: 'http://localhost:3000/data',
+        //     type: 'UPDATE',
+        //     dataType: 'json',
+        //     data: data,
+        //     success: function (data, textStatus, xhr) {
+        //         console.log(data);
+        //     },
+        //     error: function (xhr, textStatus, errorThrown) {
+        //         console.log('Error in Operation');
+        //     }
+        // });
 
 
-        $.ajax({
-            url: 'http://localhost:3000/data',
-            type: 'DELETE',
-            dataType: 'json',
-            data: data,
-            success: function (data, textStatus, xhr) {
-                console.log(data);
-            },
-            error: function (xhr, textStatus, errorThrown) {
-                console.log('Error in Operation');
-            }
-        });
+        // $.ajax({
+        //     url: 'http://localhost:3000/data',
+        //     type: 'DELETE',
+        //     dataType: 'json',
+        //     data: data,
+        //     success: function (data, textStatus, xhr) {
+        //         console.log(data);
+        //     },
+        //     error: function (xhr, textStatus, errorThrown) {
+        //         console.log('Error in Operation');
+        //     }
+        // });
     });
     
 });
