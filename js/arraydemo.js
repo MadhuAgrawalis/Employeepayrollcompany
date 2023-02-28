@@ -37,9 +37,9 @@ name.forEach(function (value,key,map){
     console.log(`${key}: ${value}`);
 });
 
-// set
+// set use in array set the value
 
-const name = new set(['madhu', 'mahesh','pratik']);
+const name = new Set(['madhu', 'mahesh','pratik']);
 console.log(name);
 name.forEach(function (value,value2,map){
     console.log(`${value}: ${value2}`);
